@@ -35,7 +35,7 @@ import {
 import { FigmaIcon } from "@/components/icons"
 
 export function SkillsSection() {
-  const [activeTab, setActiveTab] = React.useState<"all" | "Frontend" | "Backend" | "Tools">("all")
+  const [activeTab, setActiveTab] = React.useState<"all" | "Frontend" | "Tools">("all")
 
   const getSkillIcon = (iconName: string) => {
     switch (iconName) {
@@ -94,14 +94,12 @@ export function SkillsSection() {
 
   const getCategoryIcon = (title: string) => {
     if (title.includes("Frontend")) return <Layout className="size-5 text-blue-500" />
-    if (title.includes("Backend")) return <Server className="size-5 text-emerald-500" />
     return <Wrench className="size-5 text-amber-500" />
   }
 
   const filteredCategories = PORTFOLIO_DATA.skills.filter((category) => {
     if (activeTab === "all") return true
     if (activeTab === "Frontend") return category.title.includes("Frontend")
-    if (activeTab === "Backend") return category.title.includes("Backend")
     if (activeTab === "Tools") return category.title.includes("Tools")
     return true
   })
@@ -126,7 +124,6 @@ export function SkillsSection() {
             {[
               { id: "all", label: "All Technologies" },
               { id: "Frontend", label: "Frontend Stack" },
-              { id: "Backend", label: "Backend & Databases" },
               { id: "Tools", label: "Tools & DevOps" },
             ].map((tab) => (
               <button

@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Project } from "@/lib/portfolio-data"
 import { Button } from "@workspace/ui/components/button"
 import { Badge } from "@workspace/ui/components/badge"
@@ -86,6 +87,18 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
           <p className="text-sm font-medium text-muted-foreground sm:text-base">
             {project.tagline}
           </p>
+        </div>
+
+        {/* Project Image Banner */}
+        <div className="relative mt-5 w-full h-52 sm:h-64 overflow-hidden rounded-xl border border-border/50 bg-muted">
+          <Image
+            src={project.imageUrl}
+            alt={`${project.title} screenshot`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 768px"
+            priority
+          />
         </div>
 
         {/* Action Link Buttons */}

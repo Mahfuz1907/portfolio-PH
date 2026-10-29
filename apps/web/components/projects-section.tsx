@@ -13,9 +13,8 @@ export function ProjectsSection() {
   const categories = [
     "All",
     "Full-Stack Web App",
-    "E-Commerce & Fintech",
-    "Productivity & AI",
-    "Healthcare & WebRTC",
+    "News & Media",
+    "Health & Fitness",
   ]
 
   const filteredProjects = PORTFOLIO_DATA.projects.filter((p) => {
@@ -32,28 +31,11 @@ export function ProjectsSection() {
             Featured Works
           </Badge>
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl text-foreground">
-            Highlighted Projects & Applications
+            Highlighted Projects &amp; Applications
           </h2>
           <p className="mt-4 max-w-2xl text-base text-muted-foreground sm:text-lg">
-            A selection of production-grade full-stack web applications featuring real-time synchronization, distributed architectures, and intuitive modern interfaces.
+            A selection of real-world full-stack web applications showcasing modern tech stacks, clean architecture, and polished user experiences.
           </p>
-
-          {/* Filter Pills */}
-          <div className="mt-8 flex flex-wrap justify-center gap-2">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveFilter(cat)}
-                className={`rounded-full px-4 py-1.5 text-xs font-semibold transition-all duration-200 cursor-pointer ${
-                  activeFilter === cat
-                    ? "bg-primary text-primary-foreground shadow-xs"
-                    : "bg-muted/70 text-muted-foreground hover:bg-muted hover:text-foreground border border-border/50"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
         </div>
 
         {/* Projects Responsive Grid */}
@@ -66,6 +48,12 @@ export function ProjectsSection() {
             />
           ))}
         </div>
+
+        {filteredProjects.length === 0 && (
+          <div className="mt-12 flex flex-col items-center text-center py-16">
+            <p className="text-muted-foreground text-sm">No projects found in this category.</p>
+          </div>
+        )}
       </div>
 
       {/* Project Detail Modal */}

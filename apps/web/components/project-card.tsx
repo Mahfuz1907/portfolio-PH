@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Project } from "@/lib/portfolio-data"
 import { Card, CardContent, CardFooter } from "@workspace/ui/components/card"
 import { Badge } from "@workspace/ui/components/badge"
 import { Button } from "@workspace/ui/components/button"
-import { ProjectMockup } from "@/components/project-mockup"
 import { ExternalLink, Eye, ArrowRight } from "lucide-react"
 import { GithubIcon } from "@/components/icons"
 
@@ -19,13 +19,15 @@ export function ProjectCard({ project, onSelectProject }: ProjectCardProps) {
   return (
     <Card className="group flex flex-col justify-between overflow-hidden border-border/70 bg-card hover:border-primary/40 hover:shadow-xl transition-all duration-300">
       <div>
-        {/* Project Visual / Image Mockup Preview */}
-        <div
-          onClick={() => onSelectProject(project)}
-          className="cursor-pointer"
-          title="Click to view details"
-        >
-          <ProjectMockup type={project.mockupType} title={project.id} />
+        {/* Project Image Preview */}
+        <div className="relative w-full h-48 overflow-hidden bg-muted">
+          <Image
+            src={project.imageUrl}
+            alt={`${project.title} preview`}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
 
         <CardContent className="p-5 sm:p-6 space-y-4">

@@ -1,11 +1,11 @@
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { notFound } from "next/navigation"
 import { PORTFOLIO_DATA } from "@/lib/portfolio-data"
 import { Button } from "@workspace/ui/components/button"
 import { Badge } from "@workspace/ui/components/badge"
 import { Card, CardContent } from "@workspace/ui/components/card"
-import { ProjectMockup } from "@/components/project-mockup"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import {
@@ -17,7 +17,6 @@ import {
   AlertTriangle,
   Lightbulb,
   ArrowRight,
-  Globe,
   Sparkles,
 } from "lucide-react"
 import { GithubIcon } from "@/components/icons"
@@ -123,9 +122,18 @@ export default async function ProjectDetailPage({ params }: Props) {
             )}
           </div>
 
-          {/* Large Project Visual Mockup */}
+          {/* Large Project Image Banner */}
           <div className="mt-8 overflow-hidden rounded-2xl border border-border/70 bg-card shadow-xl">
-            <ProjectMockup type={project.mockupType} title={project.title} />
+            <div className="relative w-full h-64 sm:h-80 md:h-96">
+              <Image
+                src={project.imageUrl}
+                alt={`${project.title} screenshot`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1024px"
+                priority
+              />
+            </div>
           </div>
 
           {/* Deep Content Grid */}
@@ -228,22 +236,31 @@ export default async function ProjectDetailPage({ params }: Props) {
                   <Link
                     key={p.id}
                     href={`/projects/${p.id}`}
-                    className="group rounded-xl border border-border/60 bg-card p-4 hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between"
+                    className="group rounded-xl border border-border/60 bg-card overflow-hidden hover:border-primary/40 hover:shadow-md transition-all flex flex-col"
                   >
-                    <div>
-                      <span className="text-[11px] font-semibold text-primary uppercase">
-                        {p.category}
-                      </span>
-                      <h3 className="mt-1 font-bold text-sm text-foreground group-hover:text-primary transition-colors line-clamp-1">
-                        {p.title}
-                      </h3>
-                      <p className="mt-1 text-xs text-muted-foreground line-clamp-2">
-                        {p.briefDescription}
-                      </p>
+                    {/* Thumbnail */}
+                    <div className="relative w-full h-36 bg-muted overflow-hidden">
+                      <Image
+                        src={p.imageUrl}
+                        alt={p.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
                     </div>
-                    <div className="mt-3 flex items-center gap-1 text-xs font-semibold text-primary">
-                      <span>View Project</span>
-                      <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
+                    <div className="p-4 flex flex-col justify-between flex-1">
+                      <div>
+                        <span className="text-[11px] font-semibold text-primary uppercase">
+                          {p.category}
+                        </span>
+                        <h3 className="mt-1 font-bold text-sm text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                          {p.title}
+                        </h3>
+                      </div>
+                      <div className="mt-3 flex items-center gap-1 text-xs font-semibold text-primary">
+                        <span>View Project</span>
+                        <ArrowRight className="size-3 transition-transform group-hover:translate-x-1" />
+                      </div>
                     </div>
                   </Link>
                 ))}

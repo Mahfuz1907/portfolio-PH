@@ -266,7 +266,7 @@ export function HeroSection() {
                   <div className="rounded-xl border border-border/60 bg-muted/40 p-3 text-center">
                     <p className="text-xl font-extrabold text-foreground">RUET ECE</p>
                     <p className="text-[11px] font-medium text-muted-foreground">
-                      2020 – Present
+                      2022 – Present
                     </p>
                   </div>
                   <div className="rounded-xl border border-border/60 bg-muted/40 p-3 text-center">
