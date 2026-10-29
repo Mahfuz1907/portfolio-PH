@@ -1,19 +1,40 @@
-import { Button } from "@workspace/ui/components/button"
+import { Navbar } from "@/components/navbar"
+import { HeroSection } from "@/components/hero-section"
+import { AboutSection } from "@/components/about-section"
+import { SkillsSection } from "@/components/skills-section"
+import { EducationSection } from "@/components/education-section"
+import { ProjectsSection } from "@/components/projects-section"
+import { ContactSection } from "@/components/contact-section"
+import { Footer } from "@/components/footer"
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="text-muted-foreground font-mono text-xs">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+    <div className="flex min-h-screen flex-col bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary">
+      {/* 1. Sticky Navigation Bar */}
+      <Navbar />
+
+      <main className="flex-1">
+        {/* 2. Hero Section / Introduction */}
+        <HeroSection />
+
+        {/* 3. About Me Section */}
+        <AboutSection />
+
+        {/* 4. Skills Section */}
+        <SkillsSection />
+
+        {/* 5. Educational Qualification Section */}
+        <EducationSection />
+
+        {/* 6. Projects Section */}
+        <ProjectsSection />
+
+        {/* 7. Contact Section */}
+        <ContactSection />
+      </main>
+
+      {/* 8. Footer */}
+      <Footer />
     </div>
   )
 }
