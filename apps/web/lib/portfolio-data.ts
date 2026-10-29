@@ -51,6 +51,7 @@ export interface PortfolioData {
     github: string
     linkedin: string
     twitter: string
+    avatarUrl: string
     availableForHire: boolean
   }
   about: {
@@ -105,6 +106,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     github: "https://github.com/Mahfuz1907",
     linkedin: "https://www.linkedin.com/in/md-mahfuzul-alam-tamim/",
     twitter: "https://x.com/mahfuz_tamim",
+    avatarUrl: "/Photo.jpg",
     availableForHire: true,
   },
 

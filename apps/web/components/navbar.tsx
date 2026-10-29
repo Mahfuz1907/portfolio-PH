@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { PORTFOLIO_DATA } from "@/lib/portfolio-data"
 import { ModeToggle } from "@/components/mode-toggle"
 import { Button } from "@workspace/ui/components/button"
@@ -72,8 +73,15 @@ export function Navbar() {
           href="/"
           className="group flex items-center gap-2.5 font-bold tracking-tight text-foreground transition-all duration-200"
         >
-          <div className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-xs transition-transform duration-300 group-hover:scale-105">
-            <Code2 className="size-5" />
+          <div className="relative size-9 overflow-hidden rounded-full border border-primary/40 ring-2 ring-primary/20 shadow-xs transition-transform duration-300 group-hover:scale-105 shrink-0">
+            <Image
+              src={PORTFOLIO_DATA.personal.avatarUrl}
+              alt={PORTFOLIO_DATA.personal.name}
+              width={36}
+              height={36}
+              className="size-full object-cover"
+              priority
+            />
           </div>
           <div className="flex flex-col">
             <span className="text-base font-semibold leading-tight tracking-tight">

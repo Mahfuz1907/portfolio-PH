@@ -90,7 +90,7 @@ export function ContactSection() {
                     <span className="text-xs font-semibold text-muted-foreground uppercase">Email Address</span>
                     <a
                       href={`mailto:${contact.email}`}
-                      className="block text-sm font-bold text-foreground hover:text-primary transition-colors truncate max-w-[200px] sm:max-w-[240px]"
+                      className="block text-sm font-bold text-foreground hover:text-primary transition-colors truncate max-w-50 sm:max-w-80"
                     >
                       {contact.email}
                     </a>

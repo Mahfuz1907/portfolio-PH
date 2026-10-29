@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { PORTFOLIO_DATA } from "@/lib/portfolio-data"
 import { Button } from "@workspace/ui/components/button"
 import {
@@ -39,9 +40,15 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-12 items-start justify-between">
           {/* Brand & Summary (5 cols) */}
           <div className="space-y-3 md:col-span-5">
-            <div className="flex items-center gap-2 font-bold tracking-tight">
-              <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Code2 className="size-4" />
+            <div className="flex items-center gap-2.5 font-bold tracking-tight">
+              <div className="relative size-8 overflow-hidden rounded-full border border-primary/40 ring-1 ring-primary/20 shrink-0">
+                <Image
+                  src={PORTFOLIO_DATA.personal.avatarUrl}
+                  alt={PORTFOLIO_DATA.personal.name}
+                  width={32}
+                  height={32}
+                  className="size-full object-cover"
+                />
               </div>
               <span className="text-lg">{PORTFOLIO_DATA.personal.name}</span>
             </div>

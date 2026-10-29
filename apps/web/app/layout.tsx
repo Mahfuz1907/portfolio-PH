@@ -21,6 +21,13 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   authors: [{ name: "MD. Mahfuzul Alam" }],
+  icons: {
+    icon: [
+      { url: "/Photo.jpg", type: "image/jpeg" },
+    ],
+    shortcut: "/Photo.jpg",
+    apple: "/Photo.jpg",
+  },
 }
 
 export default function RootLayout({

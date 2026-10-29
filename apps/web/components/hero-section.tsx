@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import { PORTFOLIO_DATA } from "@/lib/portfolio-data"
 import { Button } from "@workspace/ui/components/button"
 import { Badge } from "@workspace/ui/components/badge"
@@ -210,13 +211,23 @@ export function HeroSection() {
               <div className="relative overflow-hidden rounded-2xl border border-border/80 bg-card/90 p-5 shadow-2xl backdrop-blur-xl">
                 {/* Visual Profile Photo / Graphic Area */}
                 <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-linear-to-br from-muted via-muted/60 to-background border border-border/50 flex flex-col items-center justify-center p-6 text-center">
-                  {/* Modern Geometric Avatar Illustration */}
-                  <div className="relative flex size-36 items-center justify-center rounded-full bg-linear-to-tr from-primary/20 via-blue-500/20 to-purple-500/20 p-1.5 ring-2 ring-primary/30">
-                    <div className="flex size-full items-center justify-center rounded-full bg-card shadow-inner">
-                      <Terminal className="size-16 text-primary animate-pulse" />
+                  {/* Real Profile Photo with Glowing Ring */}
+                  <div className="relative flex size-40 sm:size-44 items-center justify-center rounded-2xl bg-linear-to-tr from-primary/30 via-blue-500/20 to-emerald-500/30 p-1.5 ring-2 ring-primary/40 shadow-xl">
+                    <div className="relative size-full overflow-hidden rounded-xl bg-card shadow-inner">
+                      <Image
+                        src={PORTFOLIO_DATA.personal.avatarUrl}
+                        alt={PORTFOLIO_DATA.personal.name}
+                        width={200}
+                        height={200}
+                        className="size-full object-cover object-top transition-transform duration-500 hover:scale-105"
+                        priority
+                      />
                     </div>
                     {/* Floating verified badge */}
-                    <div className="absolute bottom-1 right-1 rounded-full bg-primary p-1.5 text-primary-foreground shadow-md">
+                    <div
+                      className="absolute -bottom-2 -right-2 rounded-full bg-primary p-1.5 text-primary-foreground shadow-lg ring-2 ring-background"
+                      title="Verified RUET ECE Developer"
+                    >
                       <CheckCircle2 className="size-4" />
                     </div>
                   </div>
@@ -245,7 +256,7 @@ export function HeroSection() {
                       <span className="text-emerald-500">const</span> stack = [
                       <span className="text-blue-500">&apos;React&apos;</span>,{" "}
                       <span className="text-blue-500">&apos;Next.js&apos;</span>,{" "}
-                      <span className="text-blue-500">&apos;Node.js&apos;</span>];
+                      <span className="text-blue-500">&apos;TypeScript&apos;</span>];
                     </div>
                   </div>
                 </div>
