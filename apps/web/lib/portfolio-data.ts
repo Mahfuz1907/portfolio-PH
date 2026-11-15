@@ -184,13 +184,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
         },
         {
           name: "Next.js",
-          level: "Intermediate",
-          iconName: "CircleLetterN",
-          description: "Component architecture, hooks, context, state optimization, custom hooks",
-          color: "text-sky-500",
-        },
-        {
-          name: "Next.js",
           level: "Proficient",
           iconName: "Globe",
           description: "App Router, Server Components, SSR/SSG, Server Actions, Route Handlers",
