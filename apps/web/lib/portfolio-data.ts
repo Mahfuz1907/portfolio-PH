@@ -298,10 +298,10 @@ export const PORTFOLIO_DATA: PortfolioData = {
   projects: [
     {
       id: "Studio Space",
-      title: "BazarDor – Studio Management & Booking Platform",
+      title: "Studio Space – Studio Management & Booking Platform",
       imageUrl: '/image-4.png',
       tagline:
-        "A real-time commodity price tracking web application for Bangladesh, featuring live market data, historical trends, and user-friendly search and filter capabilities.",
+        "A real-time studio hiring and creating web application, featuring browse by category, light/dark mode toggle, and user-friendly search and filter capabilities.",
       category: "Full-Stack Web App",
       mainStack: [
         "Next.js 15",
