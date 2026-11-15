@@ -297,49 +297,6 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   projects: [
     {
-      id: "WanderLust",
-      title: "Wander Lust – Discover Your Next Adventure",
-      imageUrl: '/image-5.png',
-      tagline:
-        "A real-time destination book and creating web application, featuring browse by category and user-friendly search and filter capabilities.",
-      category: "Full-Stack Web App",
-      mainStack: [
-        "Next.js 15",
-        "TypeScript",
-        "Tailwind CSS",
-        "Express JS",
-        "MongoDB",
-        "Better Auth",
-        "Shadcn UI",
-      ],
-      tags: ["Full-Stack", "WebSockets", "Collaboration", "Productivity"],
-      briefDescription:
-        "Wanderlust enables users to track different destination worldwide, providing live prices, rating, and user-friendly search and filter capabilities.",
-      detailedDescription:
-        "Wanderlust bridges the gap between traditional destination booking and modern digital platforms. Built using Next.js App Router for the frontend and a scalable Express service for WebSocket events, the platform empowers users to view pricing, rating, review on specific destinations, manage and create destinations lists, and sync updates without page reloads.",
-      keyFeatures: [
-        "Add and manage destination listings with pricing and book destinations for holiday.",
-        "Secure login with a responsive dashboard.",
-        "Browse destinations, select day slots, and track active bookings.",
-        "Collaborative Destination Lists: Create destination and also can book and browse destinations according to different categories.",
-        "Responsive Design: Optimized for both desktop and mobile devices, ensuring a seamless user experience.",
-      ],
-      challenges: [
-        "Real-Time Data Synchronization: Implemented WebSocket connections to ensure that all users see the same data simultaneously, handling potential race conditions and ensuring data integrity.",
-        "Scalable Backend Architecture: Designed a Express backend capable of handling high-frequency data updates and multiple concurrent users without performance degradation.",
-        "User Authentication & Security: Integrated BetterAuth for secure user authentication, ensuring that user data and preferences are protected.",
-      ],
-      improvements: [
-        "Enhanced Data Analytics: Implement machine learning algorithms to predict demands of users based on historical data.",
-        "Mobile App Development: Create a native mobile application to provide users with push notifications and updates.",
-        "Integration with E-Commerce Platforms: Allow users to directly hire studios through integrated e-commerce solutions.",
-      ],
-      liveUrl: "https://wanderlust-five-azure.vercel.app/",
-      githubClientUrl: "https://github.com/Mahfuz1907/wanderlust",
-      featured: true,
-      mockupType: "collaboration",
-    },
-    {
       id: "StudioSpace",
       title: "Studio Space – Studio Management & Booking Platform",
       imageUrl: '/image-4.png',
@@ -379,6 +336,49 @@ export const PORTFOLIO_DATA: PortfolioData = {
       ],
       liveUrl: "https://a-08-ph.vercel.app/",
       githubClientUrl: "https://github.com/Mahfuz1907/A-08-PH",
+      featured: true,
+      mockupType: "collaboration",
+    },
+    {
+      id: "WanderLust",
+      title: "Wander Lust – Discover Your Next Adventure",
+      imageUrl: '/image-5.png',
+      tagline:
+        "A real-time destination book and creating web application, featuring browse by category and user-friendly search and filter capabilities.",
+      category: "Full-Stack Web App",
+      mainStack: [
+        "Next.js 15",
+        "TypeScript",
+        "Tailwind CSS",
+        "Express JS",
+        "MongoDB",
+        "Better Auth",
+        "Shadcn UI",
+      ],
+      tags: ["Full-Stack", "WebSockets", "Collaboration", "Productivity"],
+      briefDescription:
+        "Wanderlust enables users to track different destination worldwide, providing live prices, rating, and user-friendly search and filter capabilities.",
+      detailedDescription:
+        "Wanderlust bridges the gap between traditional destination booking and modern digital platforms. Built using Next.js App Router for the frontend and a scalable Express service for WebSocket events, the platform empowers users to view pricing, rating, review on specific destinations, manage and create destinations lists, and sync updates without page reloads.",
+      keyFeatures: [
+        "Add and manage destination listings with pricing and book destinations for holiday.",
+        "Secure login with a responsive dashboard.",
+        "Browse destinations, select day slots, and track active bookings.",
+        "Collaborative Destination Lists: Create destination and also can book and browse destinations according to different categories.",
+        "Responsive Design: Optimized for both desktop and mobile devices, ensuring a seamless user experience.",
+      ],
+      challenges: [
+        "Real-Time Data Synchronization: Implemented WebSocket connections to ensure that all users see the same data simultaneously, handling potential race conditions and ensuring data integrity.",
+        "Scalable Backend Architecture: Designed a Express backend capable of handling high-frequency data updates and multiple concurrent users without performance degradation.",
+        "User Authentication & Security: Integrated BetterAuth for secure user authentication, ensuring that user data and preferences are protected.",
+      ],
+      improvements: [
+        "Enhanced Data Analytics: Implement machine learning algorithms to predict demands of users based on historical data.",
+        "Mobile App Development: Create a native mobile application to provide users with push notifications and updates.",
+        "Integration with E-Commerce Platforms: Allow users to directly hire studios through integrated e-commerce solutions.",
+      ],
+      liveUrl: "https://wanderlust-five-azure.vercel.app/",
+      githubClientUrl: "https://github.com/Mahfuz1907/wanderlust",
       featured: true,
       mockupType: "collaboration",
     },
