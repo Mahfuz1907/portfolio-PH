@@ -96,7 +96,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
     location: "Rajshahi, Bangladesh",
     institution: "Rajshahi University of Engineering & Technology (RUET)",
     department: "Electrical and Computer Engineering (ECE)",
-    duration: "2022 – Present",
+    duration: "2022 – 2026",
     degree: "B.Sc. in Electrical and Computer Engineering",
     email: "mahfuztamim1907@gmail.com",
     phone: "01580569928",
