@@ -423,7 +423,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       ],
       liveUrl: "https://b14-a-07-ph.vercel.app/",
       githubClientUrl: "https://github.com/Mahfuz1907/B14-A-07-PH",
-      featured: true,
+      featured: false,
       mockupType: "collaboration",
     },
     {
@@ -467,7 +467,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
       ],
       liveUrl: "https://bangla-news-24-nine.vercel.app/",
       githubClientUrl: "https://github.com/Mahfuz1907/bangla-news-24",
-      featured: true,
+      featured: false,
       mockupType: "collaboration",
     },
   ],
