@@ -297,7 +297,7 @@ export const PORTFOLIO_DATA: PortfolioData = {
 
   projects: [
     {
-      id: "Studio Space",
+      id: "StudioSpace",
       title: "Studio Space – Studio Management & Booking Platform",
       imageUrl: '/image-4.png',
       tagline:
