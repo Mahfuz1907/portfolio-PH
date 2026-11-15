@@ -184,6 +184,13 @@ export const PORTFOLIO_DATA: PortfolioData = {
         },
         {
           name: "Next.js",
+          level: "Intermediate",
+          iconName: "CircleLetterN",
+          description: "Component architecture, hooks, context, state optimization, custom hooks",
+          color: "text-sky-500",
+        },
+        {
+          name: "Next.js",
           level: "Proficient",
           iconName: "Globe",
           description: "App Router, Server Components, SSR/SSG, Server Actions, Route Handlers",
@@ -296,6 +303,49 @@ export const PORTFOLIO_DATA: PortfolioData = {
   },
 
   projects: [
+    {
+      id: "Studio Space",
+      title: "BazarDor – Studio Management & Booking Platform",
+      imageUrl: '/image-4.png',
+      tagline:
+        "A real-time commodity price tracking web application for Bangladesh, featuring live market data, historical trends, and user-friendly search and filter capabilities.",
+      category: "Full-Stack Web App",
+      mainStack: [
+        "Next.js 15",
+        "TypeScript",
+        "Tailwind CSS",
+        "Express JS",
+        "MongoDB",
+        "Better Auth",
+        "Shadcn UI",
+      ],
+      tags: ["Full-Stack", "WebSockets", "Collaboration", "Productivity"],
+      briefDescription:
+        "BazarDor enables users to track real-time commodity prices in Bangladesh, providing live market data, historical trends, and user-friendly search and filter capabilities.",
+      detailedDescription:
+        "BazarDor bridges the gap between traditional commodity trading and modern digital platforms. Built using Next.js App Router for the frontend and a scalable Node.js/Express service for WebSocket events, the platform empowers users to view price fluctuations with syntax highlighting, comment on specific items, manage shopping lists with smooth drag-and-drop transitions, and sync updates across teammates instantaneously without page reloads.",
+      keyFeatures: [
+        "Add and manage studio listings with pricing and amenities and hire studios for specific time slots.",
+        "Secure login with a responsive dashboard and dark/light theme toggle.",
+        "Browse spaces, select time slots, and track active bookings.",
+        "Collaborative Studios Lists: Create studios and also can hire and browse studios according to different categories.",
+        "Responsive Design: Optimized for both desktop and mobile devices, ensuring a seamless user experience.",
+      ],
+      challenges: [
+        "Real-Time Data Synchronization: Implemented WebSocket connections to ensure that all users see the same data simultaneously, handling potential race conditions and ensuring data integrity.",
+        "Scalable Backend Architecture: Designed a Express backend capable of handling high-frequency data updates and multiple concurrent users without performance degradation.",
+        "User Authentication & Security: Integrated BetterAuth for secure user authentication, ensuring that user data and preferences are protected.",
+      ],
+      improvements: [
+        "Enhanced Data Analytics: Implement machine learning algorithms to predict demands of users based on historical data.",
+        "Mobile App Development: Create a native mobile application to provide users with push notifications and updates.",
+        "Integration with E-Commerce Platforms: Allow users to directly hire studios through integrated e-commerce solutions.",
+      ],
+      liveUrl: "https://a-08-ph.vercel.app/",
+      githubClientUrl: "https://github.com/Mahfuz1907/A-08-PH",
+      featured: true,
+      mockupType: "collaboration",
+    },
     {
       id: "BazarDor",
       title: "BazarDor – Check the price of daily commodities in Bangladesh",
